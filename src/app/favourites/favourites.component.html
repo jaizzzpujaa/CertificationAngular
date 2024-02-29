@@ -1,3 +1,10 @@
 
 <div *ngIf="favoriteService.favoriteJobs.length === 0"><h1>No favorite jobs</h1></div>
 
+<div *ngFor="let job of favoriteService.favoriteJobs">
+    <div>{{ job.title }}</div>
+    <div>{{ job.companyName }}</div>
+    <div>{{ job.companyLogo }}</div>
+    <div>{{ job.reference }}</div>
+    <span class="icon-star active" [id]="'star-' + job.jobId"></span>
+  </div>
